@@ -196,7 +196,7 @@
 </section>
   
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -251,59 +251,45 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
+
+    <!-- Abstract -->
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Inertial odometry (IO) using only inertial measurement units (IMUs) provides a lightweight
+            solution for human motion tracking in augmented reality (AR) and wearable devices. Recent
+            learning-based IO methods have improved the generalizability of inertial localization through
+            large-scale pretraining on human motion datasets. However, these approaches remain prone to
+            drift and noise because they fail to capture human motion dynamics, especially on daily activity
+            datasets such as Nymeria.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            To address this limitation, we ground inertial odometry in human kinematics through a learned
+            IMU-inferred pose prior that encourages the propagation of physically consistent motion constraints.
+            We integrate this pose prior into existing IO architectures and reduce positional drift by up to
+            36% on the challenging Nymeria dataset, which is 5× larger than those used in prior work.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We further improve long-term performance through a sensor-fusion framework that incorporates
+            auxiliary signals from lightweight sensors already available on commercial AR glasses, including
+            the magnetometer, barometer, and a secondary IMU. With this fusion strategy, drift is reduced
+            by up to 42%, improving robustness and generalization across diverse motion conditions. Together,
+            our results establish a new paradigm for inertial and lightweight odometry by unifying human
+            motion kinematics with multimodal sensing, setting a new benchmark for accurate and robust
+            camera-less human tracking.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+    <!-- /Abstract -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
